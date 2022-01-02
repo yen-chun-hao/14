@@ -1,0 +1,19 @@
+import java.io.*;
+public class ex7
+{
+    public static void main(String[] args)throws IOException
+    {
+        int count=0;
+        String str;
+        FileReader fr=new FileReader("c:\\Java\\donkey.txt");
+        BufferedReader afr=new BufferedReader(fr);
+        while((str=afr.readLine())!=null)
+        {
+            if(count==1)
+            afr.skip(14);
+            System.out.println(str);
+            count++;
+        }
+        fr.close();
+    }
+}
